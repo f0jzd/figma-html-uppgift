@@ -1,6 +1,6 @@
 html{
-    background-color: #fd6fce;
-    font-size: 10px;
+    background-color: rgba(220, 172, 172, 1);
+    font-size: 16px;
     font-family: "Fjalla One", sans-serif;
 }
 
@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    width: 600px;
+    width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 0 0 20px 0;
@@ -19,34 +19,37 @@ body{
 }
 h1{
     margin: 0;
-    padding: 0 20px 0 20px;
+    padding: 20px 20px;
     color: #000000;
     /*text-shadow: 3px 3px 1px black;*/
 }
 #specificHeader{
     color: red;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 20px 20px;
 }
 p{
     padding: 0 30px;
 }
+
+li{
+    margin: 20px;
+}
+
 #morepadding{
     padding: 0 40px;
     color: red;
 }
-ol.a{
+ol.ingredients{
     list-style-type: disc;
-    padding-left: 50px;
+    margin-left: 10px;
     text-indent: -2px;
+
     
 }
-ol.b{
+ol.process{
     list-style-type: decimal;
-    padding-left: 50px;
-}
-
-p+ol.a{
-    margin-top: -10px;
+    margin-left: 10px;
+    
 }
 
 .image1{
@@ -61,7 +64,26 @@ p+ol.a{
     /*object-position: left;  */
 }
 
-.column
+.image2{
+    width: 100%;
+    /*display: block;*/
+}
+
+
+.row{
+    display: flex;
+    padding: 0 20px;
+}
+
+.column{
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+
+/* FLOAT VARIANT */
+/* .column
 {
     float: left;
     width: 50%;
@@ -74,7 +96,7 @@ p+ol.a{
     clear: both;
     display: table;
     padding: 0 20px;
-}
+} */
 
 
 
