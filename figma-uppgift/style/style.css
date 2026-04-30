@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 0 0 20px 0;
@@ -52,35 +52,60 @@ ol.process{
     
 }
 
-.image1{
-    display: flex;
-    justify-content: center; /*center image horizontally*/
-    align-items: center; /* center vertically */
-    object-fit: cover;
-    height: 250px;
-    
-    
+
+.image-container {
     width: 100%;
-    /*object-position: left;  */
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .image2{
+    display: block;
     width: 100%;
-    /*display: block;*/
+    height: auto;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+}
 
-.row{
+/* .row{
     display: flex;
     padding: 0 20px;
 }
 
 .column{
-    flex: 50%;
+    flex: 33%;
     box-sizing: border-box;
     padding: 5px;
 
-}
+} */
+
+ @media screen and (max-width: 600px) {
+     body {
+         background-color: #ff0000;
+     }
+
+     .container {
+         display: grid;
+         grid-template-columns: 1fr;
+         padding: 10px;
+         gap: 15px;
+     }
+ }
+ 
 
 /* FLOAT VARIANT */
 /* .column
