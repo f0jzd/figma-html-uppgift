@@ -95,7 +95,7 @@ ol.process{
 
  @media screen and (max-width: 600px) {
      body {
-         background-color: #ff0000;
+         /* background-color: #ff0000; */
      }
 
      .container {
@@ -111,7 +111,7 @@ ol.process{
 /* .column
 {
     float: left;
-    width: 50%;
+    width: 50%; 
     padding: 0 20px 0 20px;
     box-sizing: border-box;
     
