@@ -19,47 +19,60 @@
 <body>
 
 
-    <div class="image-container">
-        <img src="images/pannkakor.jpg" alt="pannkakor" class="image1">
-    </div>
+    <main>
+        <article>
 
-    <h1 id="specificHeader">Enkelt recept på pannkakor</h1>
+            <figure class="image-container">
+                <img src="images/pannkakor.jpg" alt="pannkakor" class="image1">
+            </figure>
 
-    <p id="morepadding">Gör tradionella tunna pannkakor med detta enklar och goda pannkaksrecept. </p>
+            <header>
+                <h1 id="specificHeader">Enkelt recept på pannkakor</h1>
+                <p id="morepadding">Gör tradionella tunna pannkakor med detta enklar och goda pannkaksrecept. </p>
+            </header>
 
-    <h1>Ingredienser</h1>
-    <p>För 4 portioner</p>
-    <ol class="ingredients">
-        <li>2 1/2 dl vetemjöl</li>
-        <li>1/2 tsk salt</li>
-        <li>3 ägg</li>
-        <li>smör (till stekning)</li>
-        <li>sylt, bär eller frukt till servering</li>
+            <section>
+                <h2>Ingredienser</h2>
+                <p>För 4 portioner</p>
+                <ul>
+                    <li>2 1/2 dl vetemjöl</li>
+                    <li>1/2 tsk salt</li>
+                    <li>3 ägg</li>
+                    <li>smör (till stekning)</li>
+                    <li>sylt, bär eller frukt till servering</li>
+                </ul>
+            </section>
+            
+            <section aria-labelledby="howto-heading">
+                <h2 id="howto-heading">Så här gör du</h2>
 
-    </ol>
+                <ol class="process">
+                    <li> Bland mjöl och salt i en bunke </li>
+                    <li> Vispa i hälften av mjölken och vispa till en slät smet. </li>
+                    <li> Vispa i resten av mjölken och äggen. </li>
+                    <li> Låt smeten vila ca 10 minuter. </li>
+                    <li> Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna. </li>
+                    <li> Servera med sylt, bär eller frukt </li>
+                </ol>
+            </section>
 
-    <h1>Så här gör du</h1>
-    
-    <ol class="process">
-        <li> Bland mjöl och salt i en bunke </li>
-        <li> Vispa i hälften av mjölken och vispa till en slät smet. </li>
-        <li> Vispa i resten av mjölken och äggen. </li>
-        <li> Låt smeten vila ca 10 minuter. </li>
-        <li> Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna. </li>
-        <li> Servera med sylt, bär eller frukt </li>
-    </ol>
-    
+            <section class="container">
+                <h2>Serveringstips</h2>
+                <figure class="image-card">
+                    <img src="images/servering1.png" alt="Pannkakor serverade med sylt" class="image2">
+                    <figcaption>Pannkakor med sylt</figcaption>
+                </figure>
+                <figure class="image-card">
+                    <img src="images/servering2.png" alt="Pannkakor serverade med bär" class="image2">
+                    <figcaption>Pannkakor med bär</figcaption>
+                </figure>
+            </section>
 
 
+        </article>
 
 
-    <div class="container" >
-        <img src="images/servering1.png" alt="servering1" class="image2">
-        <img src="images/servering2.png" alt="servering2" class="image2">
-    </div>
-
-
-    <!-- <div class="row">
+        <!-- <div class="row">
         <div class="column">
             <img src="images/servering1.png" alt="servering1" class="image2">
         </div>
@@ -67,6 +80,8 @@
             <img src="images/servering2.png" alt="servering2" class="image2">
         </div>
     </div> -->
+
+    </main>
 
 </body>
 
