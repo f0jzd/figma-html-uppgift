@@ -54,146 +54,93 @@ ol[role='list'] {
 
 /***************************************/
 
-
-body{
+.page{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 0 20px 0;
     border: 1px solid rgb(255, 255, 255);
     font-family: "Open Sans", sans-serif;
-   
-    
-}
 
-h1{
+}
+.recipe__title{
+    color: rgb(177, 0, 0);
+    padding: 20px;
     font-weight: bolder;
     font-size: 2.5rem;
     padding: var(--header-padding);
-    /*text-shadow: 3px 3px 1px black;*/
-}
-
-h2{
-    font-size: 2rem;
-    padding: var(--header-padding);
-    /*text-shadow: 3px 3px 1px black;*/
-}
-#specificHeader{
-    color: rgb(177, 0, 0);
-    padding: 20px;
-}
-
-p{
-    padding: 0 30px;
-}
-
-li{
-    margin: 20px;
-}
-
-#morepadding{
-    padding: 0 40px;
-}
-
-ul.with-bullets{
-    list-style-type: disc;
-    list-style-position: outside;
-    padding-left: 1.5rem;
     
 }
 
-ol.ingredients{
-    list-style-type: disc;
-    margin-left: 10px;
-    text-indent: -2em;
-}
-ol.process{
-    list-style-type: decimal;
-    margin-left: 10px;
-    
-}
-
-.image-container {
+.recipe__figure {
     width: auto;
     height: 400px;
 }
 
-.image1 {
+.recipe__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
-.image2{
-    width: 100%;
+.recipe__intro {
+    padding: 0 40px;
+
 }
-.container {
+
+.recipe__subtitle{
+    font-size: 2rem;
+    padding: var(--header-padding);
+
+}
+
+.recipe__serving {
+    padding: 0 30px;
+
+}
+
+.recipe__list-item{
+    margin: 20px;
+
+}
+
+.recipe__list--bullets{
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+    margin: 20px;
+
+}
+
+.recipe__list--decimal{
+    list-style-type: decimal;
+    margin-left: 10px;
+    margin: 20px;
+
+}
+
+.recipe__examples {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));  
   padding: 10px;
+
 }
 
-.image-card {
+.recipe__image-card {
     margin: 0 10px;
+
 }
-
-
-
-/* .row{
-    display: flex;
-    padding: 0 20px;
-}
-
-.column{
-    flex: 33%;
-    box-sizing: border-box;
-    padding: 5px;
-
-} */
 
  @media screen and (max-width: 600px) {
      body {
         color: #ff0000;
      }
 
-     .container {
+     .recipe__examples {
          display: grid;
          grid-template-columns: 1fr;
          padding: 10px;
          gap: 15px;
+         
      }
- }
- 
-
-/* FLOAT VARIANT */
-/* .column
-{
-    float: left;
-    width: 50%; 
-    padding: 0 20px 0 20px;
-    box-sizing: border-box;
-    
 }
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-    padding: 0 20px;
-} */
-
-
-
-
-/* .image2{
-    
-    float: left;
-    width: 50%;
-    padding: 5px;
-    
-    /*height: 100%;*/
-    /* object-fit: cover;
-    display: block;
-    margin: auto; center image */
-    /*object-fit: none; /* set to fill to uncrop image */
-    /*object-position: center;
-}
-.row::after */

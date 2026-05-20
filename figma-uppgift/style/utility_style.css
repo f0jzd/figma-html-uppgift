@@ -56,13 +56,23 @@ ol[role='list'] {
 
 
 body{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 0 20px 0;
-    border: 1px solid rgb(255, 255, 255);
-    font-family: "Open Sans", sans-serif;
-   
     
+    border: 1px solid rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;    
+}
+
+.max-w-1200{
+    max-width: 1200px;
+}
+
+.pb-20 {
+    padding: 0 0 20px 0;
+}
+
+/*CHECK WHY I DONT NEED THIS*/
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1{
