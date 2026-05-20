@@ -8,7 +8,7 @@
 
     <link rel="icon" type="image/gif" href="images/web_icon.gif">
 
-    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/utility_style.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,37 +16,32 @@
         rel="stylesheet">
 </head>
 
-<body class="max-w-1200 ">
-
-
-    <main >
+<body class="max-w-1200 mx-auto pb-20 font-open-sans">
+    <main>
         <article>
-
-            <figure class="image-container">
-                <img src="images/pannkakor.jpg" alt="pannkakor" class="image1">
+            <figure class="w-full h-400">
+                <img src="images/pannkakor.jpg" alt="pannkakor" class="w-full h-full object-cover">
             </figure>
 
             <header>
-                <h1 id="specificHeader">Enkelt recept på pannkakor</h1>
-                <p id="morepadding">Gör tradionella tunna pannkakor med detta enklar och goda pannkaksrecept. </p>
+                <h1 class="font-bolder text-4x1 p-header text-header p-20">Enkelt recept på pannkakor</h1>
+                <p class="px-40">Gör tradionella tunna pannkakor med detta enklar och goda pannkaksrecept. </p>
             </header>
 
             <section>
-                <h2>Ingredienser</h2>
-                <p>För 4 portioner</p>
-                <ul role="list" class="with-bullets">
+                <h2 class="text-3x1 p-header">Ingredienser</h2>
+                <p class="px-30">För 4 portioner</p>
+                <ul class="with-bullets li-disc space-xl">
                     <li>2 1/2 dl vetemjöl</li>
                     <li>1/2 tsk salt</li>
                     <li>3 ägg</li>
                     <li>smör (till stekning)</li>
                     <li>sylt, bär eller frukt till servering</li>
                 </ul>
-            </section>
-            
-            <section aria-labelledby="howto-heading">
-                <h2 id="howto-heading">Så här gör du</h2>
 
-                <ol class="process">
+            </section>
+                <h2 class="text-3x1 p-header">Så här gör du</h2>
+                <ol class="list-decimal space-xl space-left-10">
                     <li> Bland mjöl och salt i en bunke </li>
                     <li> Vispa i hälften av mjölken och vispa till en slät smet. </li>
                     <li> Vispa i resten av mjölken och äggen. </li>
@@ -57,14 +52,14 @@
             </section>
 
             <section>
-                <h2>Serveringstips</h2>
-                <section class="container">
-                    <figure class="image-card">
-                        <img src="images/servering1.png" alt="Pannkakor serverade med sylt" class="image2">
+                <h2 class="text-3x1 p-header">Serveringstips</h2>
+                <section class="grid-cols-2 grid p-10 sm-grid-cols-1 sm-p-10 sm-gap-15">
+                    <figure class="space-x-10">
+                        <img src="images/servering1.png" alt="Pannkakor serverade med sylt" class="width-full">
                         <figcaption>Pannkakor med sylt</figcaption>
                     </figure>
-                    <figure class="image-card">
-                        <img src="images/servering2.png" alt="Pannkakor serverade med bär" class="image2">
+                    <figure class="space-x-10">
+                        <img src="images/servering2.png" alt="Pannkakor serverade med bär" class="width-full">
                         <figcaption>Pannkakor med bär</figcaption>
                     </figure>
                 </section>

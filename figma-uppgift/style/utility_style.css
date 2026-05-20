@@ -9,6 +9,7 @@ html{
 :root{
     --primary-bg-color: #ffffff;
     --header-padding: 20px;
+    --header-text-color:rgb(177, 0, 0);
 }
 
 *{
@@ -53,157 +54,135 @@ ol[role='list'] {
 }
 
 /***************************************/
-
-
-body{
-    
-    border: 1px solid rgb(255, 255, 255);
-    font-family: "Open Sans", sans-serif;    
-}
+/***** WIDTH AND HEIGHT *****/
 
 .max-w-1200{
     max-width: 1200px;
 }
 
+.w-full {
+    width: 100%;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.h-full{
+    height: 100%;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+/***** TEXT *****/
+
+.font-open-sans{
+    font-family: "Open Sans", sans-serif;   
+}
+
+.font-bolder {
+    font-weight: bolder;
+}
+
+.text-4x1 {
+    font-size: 2.25rem;
+}
+
+.text-3x1 {
+    font-size: 1.875rem;
+}
+
+.text-header{
+    color: var(--header-text-color);
+}
+
+/***** LIST STYLES *****/
+
+.li-disc {
+    list-style-type: disc;
+}
+.li-outside{
+    list-style-position: outside;
+}
+.list-decimal{
+    list-style-type: decimal;
+}
+
+/***** MARGIN AND PADDING *****/
+/*** use space for lists and m for individual items (?) ***/
+
+.p-header{
+    padding: var(--header-padding);
+}
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 20px;
+}
 .pb-20 {
     padding: 0 0 20px 0;
 }
-
-/*CHECK WHY I DONT NEED THIS*/
+.px-30{
+    padding: 0 30px;
+}
+.px-40{
+    padding: 0 40px;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
-
-h1{
-    font-weight: bolder;
-    font-size: 2.5rem;
-    padding: var(--header-padding);
-    /*text-shadow: 3px 3px 1px black;*/
-}
-
-h2{
-    font-size: 2rem;
-    padding: var(--header-padding);
-    /*text-shadow: 3px 3px 1px black;*/
-}
-#specificHeader{
-    color: rgb(177, 0, 0);
-    padding: 20px;
-}
-
-p{
-    padding: 0 30px;
-}
-
-li{
+.m-20{
     margin: 20px;
 }
-
-#morepadding{
-    padding: 0 40px;
-}
-
-ul.with-bullets{
-    list-style-type: disc;
-    list-style-position: outside;
-    padding-left: 1.5rem;
-    
-}
-
-ol.ingredients{
-    list-style-type: disc;
-    margin-left: 10px;
-    text-indent: -2em;
-}
-ol.process{
-    list-style-type: decimal;
-    margin-left: 10px;
-    
-}
-
-.image-container {
-    width: auto;
-    height: 400px;
-}
-
-.image1 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image2{
-    width: 100%;
-}
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));  
-  padding: 10px;
-}
-
-.image-card {
+.space-x-10{
     margin: 0 10px;
 }
-
-
-
-/* .row{
-    display: flex;
-    padding: 0 20px;
+/*extra examples i guess?*/
+.space-sm > li {
+    margin: 0.875rem;
+}
+.space-base > li {
+    margin: 1rem;
+}
+.space-lg > li {
+    margin: 1.125rem;
+}
+.space-xl > li {
+    margin: 1.25rem;
+}
+.space-left-10{
+    margin-left: 10px;
 }
 
-.column{
-    flex: 33%;
-    box-sizing: border-box;
-    padding: 5px;
+/***** OBJECT AND LAYOUT *****/
 
-} */
+.object-cover{
+    object-fit: cover;
+}
+.grid{
+    display: grid;
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
 
+}
+/***** MEDIA *****/
  @media screen and (max-width: 600px) {
      body {
         color: #ff0000;
      }
-
-     .container {
-         display: grid;
-         grid-template-columns: 1fr;
-         padding: 10px;
-         gap: 15px;
+     .sm-grid-cols-1{
+        grid-template-columns: 1fr;
      }
- }
- 
+     .sm-p-10{
+        padding: 10px
+     }
+     .sm-gap-15{
+        gap: 15px
+     }
 
-/* FLOAT VARIANT */
-/* .column
-{
-    float: left;
-    width: 50%; 
-    padding: 0 20px 0 20px;
-    box-sizing: border-box;
-    
 }
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-    padding: 0 20px;
-} */
-
-
-
-
-/* .image2{
-    
-    float: left;
-    width: 50%;
-    padding: 5px;
-    
-    /*height: 100%;*/
-    /* object-fit: cover;
-    display: block;
-    margin: auto; center image */
-    /*object-fit: none; /* set to fill to uncrop image */
-    /*object-position: center;
-}
-.row::after */
