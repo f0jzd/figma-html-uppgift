@@ -1,0 +1,222 @@
+html{
+    
+    interpolate-size: allow-keywords;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+:root{
+    --primary-bg-color: #ffffff;
+    --header-padding: 0px;
+    --header-margin: 20px 0;
+    --flow-space: 2rem; 
+    --header-text-color:rgb(177, 0, 0);
+}
+
+*{
+    font: inherit;
+    margin: 0;
+    /* margin-block-end: 0; Does the same thing as margin 0 i guess?*/ 
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font-family: inherit;
+    font: inherit;
+}
+
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    background-color: rgba(220, 172, 172, 1);
+}
+
+
+h1,h2{
+    font-weight: bold;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/***************************************/
+/***** BLOCKS *****/
+
+.flow > * + * {
+    margin: var(--flow-space, 1em);
+}
+
+.page-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-card{
+    padding: 0 0 20px 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+
+}
+.recipe__media{
+    height: 400px;
+    overflow: hidden;
+}
+
+
+.recipe__title{
+    color: var(--header-text-color);
+    font-size: 2.25rem;
+}
+
+
+.recipe__subtitle{
+    padding: var(--header-padding);
+}
+
+.recipe__serving {
+    padding: 0 30px;
+
+}
+
+.recipe__list--bullets{
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+    margin: 20px
+    
+}
+
+.recipe__list--decimal{
+    list-style-type: decimal;
+}
+
+.recipe__examples {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));  
+}
+
+.recipe__examples > * {
+    margin: 10px;
+}
+
+/***************************************/
+/***** UTILITY *****/
+
+/***** TEXT AND FONT *****/
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.text-4x1 {
+    font-size: 2.25rem;
+}
+
+.text-header{
+    color: var(--header-text-color);
+}
+
+.space-sm > li {
+    margin: 0.875rem;
+}
+.space-base > li {
+    margin: 1rem;
+}
+.space-lg > li {
+    margin: 1.125rem;
+}
+.space-xl > li {
+    margin: 1.25rem;
+}
+.space-left-10{
+    margin-left: 10px;
+}
+
+    
+/***** PADDING / MARGIN *****/
+
+.p-header{
+    padding: var(--header-padding);
+}
+
+.p-10{
+    padding: 10px;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+.px-30 {
+padding: 0 30px;
+}
+
+.px-40 {
+padding: 0 40px;
+}
+
+.mx-10{
+    margin: 0 10px;
+}
+
+.m-header{
+    margin: var(--header-margin);
+}
+
+/***** HEIGHT / WIDTH *****/
+
+.w-full {
+    width: 100%;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.h-full{
+    height: 100%;
+}
+
+
+
+/***** OBJECT *****/
+
+.object-cover{
+    object-fit: cover;
+}
+
+
+/***************************************/
+/***** MEDIA *****/
+ @media screen and (max-width: 600px) {
+     body {
+        color: #ff0000;
+     }
+
+     .recipe__examples {
+         display: grid;
+         grid-template-columns: 1fr;
+         padding: 10px;
+         gap: 15px;
+         
+     }
+}
+
+ 
