@@ -78,29 +78,16 @@ ol[role='list'] {
     height: 400px;
     overflow: hidden;
 }
-
-
 .recipe__title{
     color: var(--header-text-color);
     font-size: 2.25rem;
 }
-
-
 .recipe__subtitle{
     padding: var(--header-padding);
 }
 
-.recipe__serving {
-    padding: 0 30px;
-
-}
-
 .recipe__list--bullets{
     list-style-type: disc;
-    list-style-position: outside;
-    padding-left: 1.5rem;
-    margin: 20px
-    
 }
 
 .recipe__list--decimal{
@@ -174,6 +161,10 @@ padding: 0 40px;
 
 .mx-10{
     margin: 0 10px;
+}
+
+.m-20{
+    margin: 20px;
 }
 
 .m-header{
