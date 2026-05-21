@@ -54,6 +54,15 @@ ol[role='list'] {
 
 /***************************************/
 
+ .recipe-card:has(img) {
+    
+    img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+}
+
 .recipe-card{
     max-width: 1200px;
     margin: 0 auto;
@@ -64,7 +73,7 @@ ol[role='list'] {
 }
 
 .recipe__header {
-
+        
     .recipe__title {
         font-weight: bolder;
         font-size: 2.5rem;
@@ -73,36 +82,40 @@ ol[role='list'] {
         padding: 20px;
         /*text-shadow: 3px 3px 1px black;*/
     }
+
+    .more-padding{
+        padding: 0 40px;
+    }
 }
 
 section:has(h2){
-
-}
-
-h2{
+    
+    h2{
     font-size: 2rem;
     padding: var(--header-padding);
-    /*text-shadow: 3px 3px 1px black;*/
+    }
 }
+
+ul[class="with-bullets"]
+{
+    background-color: blue;
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+
+
 
 p{
     padding: 0 30px;
 }
 
-li{
+section:has(ul, ol) li {
+
+    background-color: green;
     margin: 20px;
 }
 
-#morepadding{
-    padding: 0 40px;
-}
-
-ul.with-bullets{
-    list-style-type: disc;
-    list-style-position: outside;
-    padding-left: 1.5rem;
-    
-}
 
 ol.ingredients{
     list-style-type: disc;
@@ -119,16 +132,6 @@ ol.process{
     width: auto;
     height: 400px;
 }
-
-.image1 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image2{
-    width: 100%;
-}
 .container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));  
@@ -136,7 +139,7 @@ ol.process{
 }
 
 .image-card {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 
