@@ -1,0 +1,252 @@
+@property --body-bg {
+    initial-value: dodgerblue;
+    syntax: "<color>";
+    inherits: false;
+}
+
+:root {
+    --article-color-background: hsl(30, 54%, 90%);
+    --color-pink:       hsl(330, 100%, 80%);
+    /* --article-color:    rgb(0, 68, 170); */
+    --color-border-default: rgb(145, 2, 2);
+}
+
+
+/**************************************************************
+ * Reset and Base Styles
+ *********************************************************************/
+
+html{
+    background-color: var(--article-color-background);
+    
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1,h2{
+    font-weight: bold;
+}
+
+/**********************************************************************
+ * Global Styles
+ *********************************************************************/
+
+
+
+.top-container {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+}
+
+.page-wrapper {
+    background-color: #757575;
+    max-width: 1200px;
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.bottom-container {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+.logotext {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/**************************************************************************
+    PAGE NAVIGATION
+ *********************************************************************/
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #ccc;
+        text-decoration: underline;
+        transform: scale(1.05);
+        transform-origin: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+    }
+}
+/**************************************************************************
+    Main Content Styles
+ *********************************************************************/
+
+.left-side-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 2rem;
+}
+
+.left-side-panel :hover {
+    
+    background-color: var(--article-color);
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+ 
+.featured-article {
+
+    background-color: var(--article-color-background);
+    border: solid 5px var(--article-color, var(--color-border-default));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .featured-article-title{
+        font-size: 2.25rem;
+        margin: 0;
+    }
+
+    .featured-article-paragraph
+    {
+        margin: 20px;
+    }
+
+}
+
+.first-article{
+    --article-color: green;
+}
+.second-article{
+    --article-color: blue;
+}
+.third-article{
+    --article-color: red;
+}
+
+.featured-article button {
+    margin: 1rem;
+}
+
+.read-more {
+
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    justify-content: center;
+    align-items: center;
+
+    border: #fffb00 solid 5px;
+    
+}
+
+.read-more:hover {
+
+    background-color: var(--article-color, #ff9191);
+    transform: scale(1.05);
+    transform-origin: center;
+
+
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+}
+
+.article-image-container {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    border: 5px solid red;
+    border-radius: 8px;
+}
+
+
+
+
+/************************************************************************
+ * Sidebar Styles
+ *********************************************************************/
+.sidebar {
+    width: 100%;
+    max-width: 200px;
+    border: #333 solid 5px;
+}
+.sidebar-crop {
+    width: 100%;
+    overflow: hidden;
+    height: 7rem;
+    width: 124px;
+    position: relative;
+    border: 5px solid red;
+    margin: 0 auto;
+}
+
+.sidebar-image {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -1%) scale(2);
+    transform-origin: center;
+}

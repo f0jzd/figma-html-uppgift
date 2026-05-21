@@ -9,6 +9,10 @@ html{
 :root{
     --primary-bg-color: #ffffff;
     --header-padding: 20px;
+
+    --primary-ff:"Open Sans", sans-serif;
+
+    --article-width: 1200px;
 }
 
 *{
@@ -33,6 +37,7 @@ body{
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     background-color: rgba(220, 172, 172, 1);
+    font-family: var(--primary-ff);
 }
 
 h1,h2{
@@ -54,6 +59,55 @@ ol[role='list'] {
 
 /***************************************/
 
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 20px;
+    background-color: #333;
+    position: relative;
+}
+
+.nav-links-header {
+
+    a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        transition: color 0.3s;
+        display: block;
+        padding: 1rem;
+    }
+
+    a:hover {
+        color: #ccc;
+        text-decoration: underline;
+        transform: scale(1.05);
+        transform-origin: center;
+    }
+    .navbar {
+        
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        background-color: #333;
+        justify-content: center;
+
+        gap: 20px;
+    }
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    margin: 10px;
+    transition: transform 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+
  .recipe-card:has(img) {
     
     img{ 
@@ -64,11 +118,9 @@ ol[role='list'] {
 }
 
 .recipe-card{
-    max-width: 1200px;
+    max-width: var(--article-width);
     margin: 0 auto;
     padding: 0 0 20px 0;
-    border: 1px solid rgb(255, 255, 255);
-    font-family: "Open Sans", sans-serif;
     background-color: var(--primary-bg-color);
 }
 
@@ -98,7 +150,7 @@ section:has(h2){
 
 ul[class="with-bullets"]
 {
-    background-color: blue;
+    /* background-color: blue; */
     list-style-type: disc;
     list-style-position: outside;
     padding-left: 1.5rem;
@@ -112,16 +164,16 @@ p{
 
 section:has(ul, ol) li {
 
-    background-color: green;
+    /* background-color: green; */
     margin: 20px;
 }
 
 
-ol.ingredients{
+/* ol.ingredients{
     list-style-type: disc;
     margin-left: 10px;
     text-indent: -2em;
-}
+} */
 ol.process{
     list-style-type: decimal;
     margin-left: 10px;
