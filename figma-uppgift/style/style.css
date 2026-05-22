@@ -4,6 +4,8 @@ html{
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+
+    scroll-behavior: smooth; /*Adds a smooth scroll effect*/
 }
 
 :root{
@@ -125,7 +127,9 @@ ol[role='list'] {
 }
 
 .recipe__header {
-        
+    
+    margin: 0 20px;
+
     .recipe__title {
         font-weight: bolder;
         font-size: 2.5rem;
@@ -141,6 +145,8 @@ ol[role='list'] {
 }
 
 section:has(h2){
+
+    margin: 2rem;
     
     h2{
     font-size: 2rem;
@@ -150,10 +156,9 @@ section:has(h2){
 
 ul[class="with-bullets"]
 {
-    /* background-color: blue; */
     list-style-type: disc;
     list-style-position: outside;
-    padding-left: 1.5rem;
+    padding-left: 3rem;
 }
 
 
@@ -183,16 +188,38 @@ ol.process{
 .image-container {
     width: auto;
     height: 400px;
+
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover{
+    transform: scale(1.5);
+
 }
 .container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));  
-  padding: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));    
 }
 
 .image-card {
+    position:relative;
     margin: 10px;
+
+    img{
+        border-radius: 10px;
+    }
 }
+
+.image-card figcaption {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 0px;
+  background: rgba(0,0,0,0.6);
+  padding: 5px 10px;
+  width: 100%;
+}
+
+
 
 
 
