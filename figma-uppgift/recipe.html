@@ -17,41 +17,44 @@
 </head>
 
 <body>
-    <main class="page-wrapper">
+    <main>
         <header class="site-header">
-
-            <img src="images/3x copy.webp" alt="" class="logo">
-
-
             <nav class="nav-links-header">
-                <div class="navbar">
+                <div class="logo">
+                    <img src="images/3x copy.webp" alt="">
+                </div>
 
-                    <li><a href="recipe.html">Recipe</a></li>
-                    <li><a href="home.html">Home</a></li>
+                <ul class="navbar" role='list'>
+                    <li><a href="updated_home.html">Home</a></li>
                     <li><a href="#recipe-ingredienser">Ingredienser</a></li>
                     <li><a href="#recipe-serveringstips">Serveringstips</a></li>
+                    
+                </ul>
 
+                <div class=" sign-up--btn">
+                    <button>Sign up</button>
                 </div>
+
             </nav>
         </header>
 
-        <article class="recipe-card">
+        <article class="recipe__card">
 
-            <figure class="image-container">
+            <figure class="recipe__figure">
                 <img src="images/pannkakor.jpg" alt="pannkakor" class="">
             </figure>
 
-            <section class="recipe__header">
+            <section class="recipe__intro">
                 <h1 class="recipe__title">Enkelt recept på pannkakor</h1>
                 <p class="more-padding">Gör tradionella tunna pannkakor med detta enklar och goda pannkaksrecept. </p>
             </section>
 
-            <section id="recipe-ingredienser">
-                <h2>Ingredienser</h2>
-                <p>För 4 portioner</p>
+            <section id="recipe-ingredienser" class="recipe__ingredienser">
+                <h2 class="recipe__subtitle">Ingredienser</h2>
+                <p class="recipe__serving">För 4 portioner</p>
                 <ul class="with-bullets">
                     <li>2 1/2 dl vetemjöl</li>
-                    <li>1/2 tsk salt</li>
+                    <li>1/2tsk salt</li>
                     <li>3 ägg</li>
                     <li>smör (till stekning)</li>
                     <li>sylt, bär eller frukt till servering</li>
@@ -61,7 +64,7 @@
             <section aria-labelledby="howto-heading">
                 <h2>Så här gör du</h2>
 
-                <ol class="process">
+                <ol class="recipe__list--decimal">
                     <li> Bland mjöl och salt i en bunke </li>
                     <li> Vispa i hälften av mjölken och vispa till en slät smet. </li>
                     <li> Vispa i resten av mjölken och äggen. </li>
@@ -73,12 +76,12 @@
 
             <section id="recipe-serveringstips">
                 <h2 id="serverings tips">Serveringstips</h2>
-                <section class="container">
-                    <figure class="image-card">
+                <section class="recipe__examples">
+                    <figure class="recipe__image-card">
                         <img src="images/servering1.png" alt="Pannkakor serverade med sylt" class="image2">
                         <figcaption>Pannkakor med sylt</figcaption>
                     </figure>
-                    <figure class="image-card">
+                    <figure class="recipe__image-card">
                         <figcaption>Pannkakor med bär</figcaption>
                         <img src="images/servering2.png" alt="Pannkakor serverade med bär" class="image2">
 
