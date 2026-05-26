@@ -16,10 +16,12 @@ html {
     --article-width: 120ch;
 
     --article-color-background: rgba(220, 172, 172, 1);
+    --homepage-color-background: rgb(190, 253, 255);
+    --module-color-background: rgb(255, 255, 255);
     --color-pink: hsl(330, 100%, 80%);
     --color-border-default: rgb(145, 2, 2);
-
     --sidebar-background-color: rgb(224, 110, 110);
+
 
 }
 
@@ -47,9 +49,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
-    background-color: rgba(220, 172, 172, 1);
     font-family: var(--primary-ff);
-
     background-color: var(--article-color-background);
     margin: 0;
     padding: 0;
@@ -68,6 +68,7 @@ h3,
 h4,
 h5,
 h6 {
+    text-wrap: pretty;
     overflow-wrap: break-word;
 }
 
@@ -89,12 +90,40 @@ li {
 }
 
 /* ======================================== */
+/* === UTILITY ================== */
+/* ======================================== */
+
+.text-4x1 {
+    font-size: 2.25rem;
+}
+
+.text-3x1 {
+    font-size: 1.875rem;
+}
+
+.text-2x1 {
+    font-size: 1.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+
+
+
+
+/* ======================================== */
 /* === MAIN CONTENT ================== */
 /* ======================================== */
 
 .page-wrapper {
-    background-color: #757575;
-    max-width: 1200px;
+    background-color: #949494;
+    max-width: 1300px;
     min-width: 500px;
     margin-inline: auto;
     padding: 2rem;
@@ -118,24 +147,35 @@ li {
 
 .site-header {
 
+    width: 100%;
+
+
     background-color: #333;
+    
+
+
+
+
 }
 
 .logo {
-
     justify-content: center;
-    height: 80px;
+    height: 40px;
     width: auto;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; 
+}
 
-    &:hover {
-        transform: scale(1.2);
-    }
+.logo:hover {
+    transform: scale(1.2);
+}
 
-    img {
-        max-width: 100%;
-        height: 100%;
-        
+.logo img {
+    max-width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        display: none;
     }
 }
 
@@ -152,17 +192,13 @@ li {
     flex: 1;
 }
 
-
-
-
 .nav-links-header {
-
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    
+
 
 }
 
@@ -171,14 +207,11 @@ li {
     flex: 4 0 auto;
     display: flex;
     padding: 0px;
+
     margin: auto;
 
     justify-content: center;
     
-    
-    
-   
-
     a {
 
         width: auto;
@@ -205,11 +238,12 @@ li {
 
 .featured-article {
 
-    background-color: var(--article-color-background);
+    background-color: var(--homepage-color-background);
     border: solid 5px var(--article-color, var(--color-border-default));
     display: flex;
     flex-direction: column;
     align-items: center;
+
 
     .featured-article-title {
         font-size: 2.25rem;
@@ -272,6 +306,38 @@ li {
     border-radius: 8px;
 }
 
+
+/* ======================================== */
+/* === FLEXBOX SECTION ================== */
+/* ======================================== */
+
+.article__curriculum{
+    border: solid 5px rgb(0, 0, 0);
+
+}
+.article__curriculum__module {
+    
+    margin-inline: 10px;
+    margin-block: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+   
+    img {
+            width: 100%;
+            max-height: 228px;
+            object-fit: cover;
+    
+            border-radius: 8px;
+    
+        }
+
+}
+
+
 /* ======================================== */
 /* === SIDEBAR STYLES ================== */
 /* ======================================== */
@@ -280,6 +346,11 @@ li {
     width: 100%;
     max-width: 200px;
     border: #333 solid 5px;
+
+    @media screen and (max-width: 600px) {
+            display: none;
+    
+        }
 
 }
 
@@ -300,6 +371,10 @@ li {
     left: 50%;
     transform: translate(-40%, -1%) scale(2);
     transform-origin: center;
+}
+
+@media screen and (max-width: 600px) {
+    
 }
 
 /*************************************/
