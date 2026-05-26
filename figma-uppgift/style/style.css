@@ -22,6 +22,9 @@ html {
     --color-border-default: rgb(145, 2, 2);
     --sidebar-background-color: rgb(224, 110, 110);
 
+    --media-query-screen-width: 600px;
+
+    --border-radius-default: 8px;
 
 }
 
@@ -29,6 +32,7 @@ html {
     font: inherit;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 img {
@@ -123,8 +127,8 @@ li {
 
 .page-wrapper {
     background-color: #949494;
-    max-width: 1300px;
-    min-width: 500px;
+    width: 100%;
+    max-width: 85rem;
     margin-inline: auto;
     padding: 2rem;
     display: flex;
@@ -135,7 +139,7 @@ li {
 .left-side-panel {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 1;
     gap: 2rem;
 
 }
@@ -146,22 +150,28 @@ li {
 /* ======================================== */
 
 .site-header {
-
     width: 100%;
-
-
     background-color: #333;
-    
 
 
-
-
+    position: sticky;
+    top: 0;
 }
+
+.nav-links-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+
+    
+}
+
 
 .logo {
     justify-content: center;
     height: 40px;
-    width: auto;
+    align-items: center;
     transition: transform 0.5s ease; 
 }
 
@@ -170,56 +180,48 @@ li {
 }
 
 .logo img {
-    max-width: 100%;
     height: 100%;
 }
-@media screen and (max-width: 768px) {
-    .logo {
+
+
+.sign-up--btn {
+    
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    width: auto;
+
+    border-radius: var(--border-radius-default);
+
+    @media screen and (max-width: 600px) {
+    .sign-up-btn--text{
         display: none;
     }
 }
-
-.sign-up--btn {
-    padding: 0;
-    width: auto;
-    justify-content: center;
-
-
 }
 
-.sign-up--btn, .logo{
-    display: flex;
-    flex: 1;
-}
 
-.nav-links-header {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-
-}
 
 .navbar {
 
-    flex: 4 0 auto;
+    
     display: flex;
-    padding: 0px;
+    gap: 1.5rem;
 
-    margin: auto;
+    padding: 0;
+    margin: 0;
 
-    justify-content: center;
     
     a {
 
-        width: auto;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        transition: color 0.3s;
         display: block;
         padding: 1rem;
+        transition: color 0.3s;
+
     }
 
     a:hover {
@@ -228,6 +230,10 @@ li {
         transform: scale(1.05);
         transform-origin: center;
     }
+
+    @media screen and (max-width: 600px) {
+    display: block;
+}
 
 }
 
@@ -244,13 +250,29 @@ li {
     flex-direction: column;
     align-items: center;
 
+    text-align: center;
+
+    border-radius: var(--border-radius-default);
+
+
+
 
     .featured-article-title {
         font-size: 2.25rem;
     }
 
     .featured-article-paragraph {
-        margin: 20px;
+        margin-inline: 20px;
+        margin-block: 10px;
+    }
+
+    .article-image-container {
+        padding-inline: 10px;
+        padding-block: 10px;
+        width: 100%;
+        height: auto;
+        
+
     }
 
 }
@@ -265,6 +287,10 @@ li {
 
 .third-article {
     --article-color: red;
+}
+
+.flex-article{
+    --article-color: rgb(255, 0, 200);
 }
 
 .featured-article button {
@@ -295,16 +321,9 @@ li {
 .article-image {
     width: 100%;
     height: auto;
+    border-radius: var(--border-radius-default);
 }
 
-.article-image-container {
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: auto;
-    border: 5px solid red;
-    border-radius: 8px;
-}
 
 
 /* ======================================== */
@@ -320,21 +339,21 @@ li {
     margin-inline: 10px;
     margin-block: 10px;
 
-
     display: flex;
+
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
    
     img {
             width: 100%;
-            max-height: 228px;
-            object-fit: cover;
-    
-            border-radius: 8px;
-    
+            max-height: 400px;
+            object-fit: contain;
         }
-
+    
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+        }
 }
 
 
@@ -343,13 +362,18 @@ li {
 /* ======================================== */
 
 .sidebar {
+
+    text-align: center;
+
     width: 100%;
-    max-width: 200px;
+    max-width: 225px;
     border: #333 solid 5px;
+    background-color: var(--homepage-color-background);
+
+    border-radius: var(--border-radius-default);
 
     @media screen and (max-width: 600px) {
             display: none;
-    
         }
 
 }
@@ -360,8 +384,9 @@ li {
     height: 7rem;
     width: 124px;
     position: relative;
-    border: 5px solid red;
     margin: 0 auto;
+    margin-block: 0.75rem;
+    border-radius: var(--border-radius-default);
 }
 
 .sidebar-image {
@@ -371,14 +396,39 @@ li {
     left: 50%;
     transform: translate(-40%, -1%) scale(2);
     transform-origin: center;
+    background-color: pink;
+
 }
 
-@media screen and (max-width: 600px) {
-    
+.sidebar__paragraph{
+    margin-inline: 10px;
 }
+
+
+.sidebar__social{
+    background-color: var(--homepage-color-background);
+    border: none;
+    color: rgb(255, 2, 192);
+    cursor: pointer;
+    width: auto;
+    border-radius: var(--border-radius-default);
+    padding: 5px;
+    margin-block-end: 5px;
+
+    transition: background-color 0.2s;
+
+    &:hover{
+        background-color: rgb(0, 86, 107);
+    }
+}
+
+
 
 /*************************************/
 
+/* ======================================== */
+/* === RECIPE STUFF ================== */
+/* ======================================== */
 
 .recipe__card {
     max-width: var(--article-width);
@@ -455,7 +505,7 @@ section:has(ul, ol) li {
     margin: 10px;
 
     img {
-        border-radius: 10px;
+        border-radius: var(--border-radius-default);
     }
 }
 
@@ -466,6 +516,10 @@ section:has(ul, ol) li {
     background: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     width: 100%;
+}
+
+.recipe__ingredienser,.recipe__serving-tips{
+    scroll-margin-top: 40px;
 }
 
 
