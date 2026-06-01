@@ -14,177 +14,206 @@
 </head>
 
 <body>
-
 <header class="site-header">
-    <nav class="nav-links-header">
-         <div class="logo">
+    <nav class="site-nav">
+         <div class="site-nav__logo">
             <img src="images/3x copy.webp" alt="">
         </div> 
-        <ul class="navbar" role='list'>
+        <ul class="site-nav__list" role='list'>
             <li><a href="updated_home.html">Home</a></li>
             <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="recept-compendium.html">Recipe Compendium</a></li>
         </ul>
-            <button class="sign-up--btn"><i class="fa-solid fa-user"></i>
-                <span class="sign-up-btn--text">Sign up</span></button>
+            <button class="site-nav__button"><i class="fa-solid fa-user"></i>
+                <span>Sign up</span></button>
         </nav>
 </header>
+<div class="page-flex page-style">
+     <aside class="sidebar">
+        <h2>Page Content</h2>
+        <ul>
+            <li><a href="#recipe-serveringstips">Pannkaksrecept</a></li>
+            <li><a href="#recipe-serveringstips">Andra Recept</a></li>
+            <li><a href="#recipe-serveringstips">Random Blog #1</a></li>
+            <li><a href="#recipe-serveringstips">Random Blog #2</a></li>
+            <li><a href="#recipe-serveringstips">Random Blog #3</a></li>
+        </ul>    
+    </aside>
 
-    <div class="page-wrapper">
-        <main class="left-side-panel">
-            <article class="featured-article first-article">
-                <h2 class="featured-article-title">Pannkaks Recept</h2>
-                <p>Intresserad i att laga pannkakor?</p>
-                <div class="article-image-container">
-                    <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
+    <main class="main_content">
+        <article class="featured-article first-article">
+            <h2>Pannkaks Recept</h2>
+            <p>Intresserad i att laga pannkakor?</p>
+            <div class="featured-article__image__container">
+                <img src="images/pannkakor.jpg" alt="" class="article-image">
+            </div>
+            <p>"Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum."
+            </p>
+            <a href="recipe.html" class="featured-article__button">Recipe</a>
+        </article>
+
+        <article class="featured-article first-article">
+            <h2>Andra Recept</h2>
+            <article class="cards">
+                <div class="recipes__card">
+                    <div>
+                        <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
+                    </div>
                 </div>
-                <p class="featured-article-paragraph">"Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum."
-                </p>
-
-                <a href="recipe.html" class="read-more">Recipe</a>
-
-            </article>
-
-            <article class="featured-article first-article">
-                <h2 class="featured-article-title">Andra Recept</h2>
-                <article class="recipes__cards__collection">
-                    <div class="featured-article__other-recipes__card">
-                        <div class="article-image-container">
-                            <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
-                        </div>
+                <div class="recipes__card">
+                    <div>
+                        <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
                     </div>
-                    <div class="featured-article__other-recipes__card">
-                        <div class="article-image-container">
-                            <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
-                        </div>
-                    </div>
-                    <div class="featured-article__other-recipes__card">
-                        <div class="article-image-container">
-                            <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
-                        </div>
-                    </div>
-                    <div class="featured-article__other-recipes__card">
-                        <div class="article-image-container">
-                            <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
-                        </div>
-                    </div>
-                    <a href="recipe.html" class="read-more">Recipe</a>
-                </article>
-            </article>
-
-
-            <article class="featured-article second-article">
-                <h2>Welcome to the Home Page</h2>
-                <p>This is the home page of our website. Feel free to explore and learn more about us!</p>
-                <header>
-                    <h2>About Us</h2>
-                </header>
-                <div class="article-image-container">
-                    <img src="images/asd.png" alt="About Us" class="article-image">
                 </div>
-                <p>"Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum."
-                </p>
-
-                <button class="read-more">Read More</button>
-            </article>
-
-            <article class="featured-article third-article">
-                <h2>Welcome to the Home Page</h2>
-                <p>This is the home page of our website. Feel free to explore and learn more about us!</p>
-                <header>
-                    <h2>About Us</h2>
-                </header>
-                <div class="article-image-container">
-                    <img src="images/asd.png" alt="About Us" class="article-image">
+                <div class="recipes__card">
+                    <div>
+                        <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
+                    </div>
                 </div>
-                <p>"Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum."
-                </p>
-
-                <button class="read-more">Read More</button>
+                <div class="recipes__card">
+                    <div>
+                        <img src="images/pannkakor.jpg" alt="About Us" class="article-image">
+                    </div>
+                </div>
             </article>
+            <a href="recipe.html" class="featured-article__button">Recipe</a>
+        </article>
 
-            <article class="featured-article flex-article">
+
+        <article class="featured-article second-article">
+            <h2>Welcome to the Home Page</h2>
+            <p>This is the home page of our website. Feel free to explore and learn more about us!</p>
+            <header>
+                <h2>About Us</h2>
+            </header>
+            <div>
+                <img src="images/asd.png" alt="About Us" class="article-image">
+            </div>
+            <p>"Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum."
+            </p>
+            <button class="featured-article__button">Read More</button>
+        </article>
+
+        <article class="featured-article third-article">
+            <h2>Welcome to the Home Page</h2>
+            <p>This is the home page of our website. Feel free to explore and learn more about us!</p>
+            <header>
+                <h2>About Us</h2>
+            </header>
+            <div>
+                <img src="images/asd.png" alt="About Us" class="article-image">
+            </div>
+            <p>"Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum."
+            </p>
+
+            <button class="featured-article__button">Read More</button>
+        </article>
+
+        <article class="featured-article flex-article">
+
+            <div class="article__curriculum">
                 <article class="article__curriculum__module">
                     <img src="images/4x.avif" alt="">
                     <div>
                         <h3 class="">Fluid Grid Systems</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta amet, assumenda eius iste dignissimos placeat,
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta amet, assumenda eius
+                            iste dignissimos placeat,
                             laudantium temporibus?</p>
                     </div>
                 </article>
-            </article>
-
-            
-            <div class="grid-even-columns">
-                <div class="flow">
+                <article class="article__curriculum__module">
                     <img src="images/4x.avif" alt="">
-                    <h2>HGi my name is</h2>
-                    <p>Skibidi toilet rizz ohio </p>
-                </div>
-                <div class="flow">
+                    <div>
+                        <h3 class="">Fluid Grid Systems</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta amet, assumenda eius
+                            iste dignissimos placeat,
+                            laudantium temporibus?</p>
+                    </div>
+                </article>
+                <article class="article__curriculum__module">
                     <img src="images/4x.avif" alt="">
-                    <h2>HGi my name is</h2>
-                    <p>Skibidi toilet rizz ohio </p>
-                </div>
-                <div class="flow">
-                    <img src="images/4x.avif" alt="">
-                    <h2>HGi my name is</h2>
-                    <p>Skibidi toilet rizz ohio </p>
-                </div>
-                <div class="flow">
-                    <img src="images/4x.avif" alt="">
-                    <h2>HGi my name is</h2>
-                    <p>Skibidi toilet rizz ohio </p>
-                </div>
+                    <div>
+                        <h3 class="">Fluid Grid Systems</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta amet, assumenda eius
+                            iste dignissimos placeat,
+                            laudantium temporibus?</p>
+                    </div>
+                </article>
             </div>
+        </article>
 
-            
-            
-            </main>
 
-            <aside class="sidebar">
-                <h2>Latest News</h2>
-            <div class="sidebar-crop">
-                <img src="images/KotoriTrasparente.png" alt="" class="sidebar-image" width="640" height="890">
+        <div class="grid-even-columns">
+            <div class="flow">
+                <img src="images/4x.avif" alt="">
+                <h2>HGi my name is</h2>
+                <p>Skibidi toilet rizz ohio </p>
             </div>
-            <p class="sidebar__paragraph">Stay updated with the latest news and updates from our website. We regularly post new content and
-                announcements,
-                so be sure to check back often!
-            </p>
-            <div>
-                <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
-                <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
-                <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
+            <div class="flow">
+                <img src="images/4x.avif" alt="">
+                <h2>HGi my name is</h2>
+                <p>Skibidi toilet rizz ohio </p>
             </div>
-        </aside>
-    </div>
-    
-    <footer class="bottom-container">
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+            <div class="flow">
+                <img src="images/4x.avif" alt="">
+                <h2>HGi my name is</h2>
+                <p>Skibidi toilet rizz ohio </p>
+            </div>
+            <div class="flow">
+                <img src="images/4x.avif" alt="">
+                <h2>HGi my name is</h2>
+                <p>Skibidi toilet rizz ohio </p>
+            </div>
+        </div>
+
+    </main>
+
+    <aside class="sidebar">
+        <h2>Latest News</h2>
+        <div class="sidebar-crop">
+            <img src="images/KotoriTrasparente.png" alt="" class="sidebar-image" width="640" height="890">
+        </div>
+        <p class="sidebar__paragraph">Stay updated with the latest news and updates from our website. We regularly post
+            new content and
+            announcements,
+            so be sure to check back often!
+        </p>
+        <div>
+            <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
+            <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
+            <button class="sidebar__social"><i class="fa-brands fa-bluesky"></i></button>
+        </div>
+    </aside>
+
+</div>
+
+<footer class="bottom-container">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
 </body>
 
 </html>

@@ -166,7 +166,7 @@ li {
     background-color: blueviolet;
     border: none;
     color: white;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     cursor: pointer;
     width: auto;
 
@@ -295,13 +295,10 @@ li {
     display: grid;
     place-self: center;
 
-
-    
     grid-template-areas: 
         "image"
         "text"
         "btn";
-
 
     img,
     .recipe__card__read__more{
