@@ -1,0 +1,187 @@
+.article__curriculum {
+    border: solid 5px rgb(0, 0, 0);
+    display: flex;
+
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.article__curriculum__module {
+
+    margin-inline: 10px;
+    margin-block: 10px;
+
+    flex: 1;
+
+    img {
+        width: 50%;
+        height: auto;
+        margin: auto;
+
+    }
+
+    /* @media screen and (max-width: 600px) {
+        flex-direction: column;
+    } */
+}
+
+/* ======================================== */
+/* === SIDEBAR STYLES ================== */
+/* ======================================== */
+
+.sidebar {
+
+    text-align: center;
+    /* width: max(20%, 170px); */
+
+    /* width: 20%; */
+    /* max-width: 225px; */
+    border: #333 solid 5px;
+    background-color: var(--homepage-color-background);
+
+    border-radius: var(--border-radius-default);
+    
+    height: fit-content;
+
+    .sidebar-crop {
+        width: 100%;
+        overflow: hidden;
+        height: 7rem;
+        width: 124px;
+        position: relative;
+        margin: 0 auto;
+        margin-block: 0.75rem;
+        border-radius: var(--border-radius-default);
+    }
+
+    .sidebar-image {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -1%) scale(2);
+        transform-origin: center;
+        background-color: pink;
+
+    }
+
+    p {
+        margin-inline: 10px;
+    }
+
+
+    .sidebar__social {
+        background-color: var(--homepage-color-background);
+        border: none;
+        color: rgb(255, 2, 192);
+        cursor: pointer;
+        width: auto;
+        border-radius: var(--border-radius-default);
+        padding: 5px;
+        margin-block-end: 5px;
+
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: rgb(0, 86, 107);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+
+/* ======================================== */
+/* === HOMEPAGE ARTICLES ================== */
+/* ======================================== */
+
+.featured-article {
+
+    background-color: var(--homepage-color-background);
+
+    background-color: oklch(from var(--homepage-color-background) l c calc(h * 0.6)); 
+    /* border: solid 5px var(--article-color, var(--color-border-default)); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius-default);
+
+
+    h2 {
+        /* font-size: 2.25rem; */
+
+        font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+
+    }
+
+    p {
+        margin-inline: 20px;
+        margin-block: 10px;
+    }
+
+    .featured-article__image__container {
+
+        width: 95%;
+        height: auto;
+
+    }
+
+}
+
+
+.first-article {
+    --article-color: hsl(120, 100%, 25%);
+}
+
+.second-article {
+    --article-color: hsl(240, 100%, 50%);
+}
+
+.third-article {
+    --article-color: hsl(0, 100%, 50%);
+}
+
+.flex-article {
+    --article-color: hsl(313, 100%, 50%);
+}
+
+.featured-article__button {
+
+    --hover-bg: hsl(from  var(--article-color) calc(h + 180) s l);
+
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    border: var(--article-color) solid 5px;
+
+    &:hover {
+
+
+        background-color: var(--hover-bg);
+
+        color: contrast-color(var(--hover-bg));
+        /* background-color: var(--article-color, #ff9191); */
+        transform: scale(1.05);
+        transform-origin: center;
+    }
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-default);
+}
