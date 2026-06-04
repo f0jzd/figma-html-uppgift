@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/09345043bc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -83,7 +85,133 @@
                     </figure>
                 </section>
             </section>
+
+            
+            <section class="review-container">
+                
+                <h2>Leave a review?</h2>
+                
+                <form action="#" method="post">
+                                       
+                    <div class="form-group">
+                        <label for="review"></label>
+                        <textarea name="review" id="review" rows="5" placeholder="Share your thoughts..."></textarea>
+                    </div>
+
+                    <fieldset class="rating">
+                    
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">
+                            <i class="fa-solid fa-star"></i>
+                        </label>
+
+                    </fieldset>
+
+                    <p class="text-center">Your rating: <span id = "ratingValue">0</span>/5</p>
+                    
+                    <button class="review-button">Send</button>
+                    
+                </form>
+
+                <script>
+                    const radios = document.querySelectorAll('input[name="rating"]');
+                    const output = document.getElementById('ratingValue')
+                    radios.forEach(radio => {
+                        radio.addEventListener('change', () => {
+                            output.textContent=radio.value;
+                        });
+                    });
+
+
+                </script>
+
+            </section>
+            
         </article>
+    </main>
+        
+        
+        <footer class="bottom-container">
+            
+            <div class="footer-website">
+                
+                <div class="footer-intro">
+                    <img src="images/chicken.svg" alt="" width="40" height="40">
+                    <p>The best recipes online.</p>
+                </div>
+                
+                <ul class="footer-socials">
+                    <li><a href=""><i class="fa-brands fa-bluesky footer-icon"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-bluesky footer-icon"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-bluesky footer-icon"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-bluesky footer-icon"></i></a></li>
+                </ul>
+                    
+        
+                <dl class="footer-links">
+                    <dt class="text-xl">About</dt>
+                    <dd>
+                        <ul class="footer-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blog & Updates</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                        </ul>
+                    </dd>
+        
+                </dl>
+
+                <dl class="footer-links">
+                    <dt class="text-xl">Contribute</dt>
+                    <dd>
+                        <ul class="footer-list">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Community Hub</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+        
+                <dl class="footer-links">
+                    <dt class="text-xl">Chefs</dt>
+                    <dd>
+                        <ul class="footer-list">
+                            <li><a href="#">Explore</a></li>
+                            <li><a href="#">Press Room</a></li>
+                            <li><a href="#">Developer Docs</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">Newsletter Signup</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="footer-company">
+
+                <p>&copy; 2024 My Website. All rights reserved.</p>
+            </div>
+
+            
+        </footer>
 
 
 
@@ -101,7 +229,6 @@
         </div>
     </div> -->
 
-    </main>
 
 </body>
 

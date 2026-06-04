@@ -11,22 +11,17 @@ html {
 
 :root {
 
-
-    
     --header-padding: 20px;
     --primary-ff: "Open Sans", sans-serif;
     --article-width: 85rem;
-
-
-    /* --surface:  */
  
     --primary-bg-color: oklch(80.21% 0.02635 17.525);
     --primary-body-color:oklch(98% 0.005 18); 
 
     --brand-color: oklch(98% 0.005 18); 
      --brand-accent: oklch(60% 0.12 160); 
-/*
-    --brand-primary: oklch(55% 0.10 18.335); 
+
+    /*--brand-primary: oklch(55% 0.10 18.335); 
     --brand-500: oklch(78.8% 0.0564 18.335);
     --primary: oklch(55% 0.16 260); */
     /* Light tints
@@ -150,6 +145,8 @@ li {
     word-break: break-word;
 }
 
+
+
 /* ======================================== */
 /* === UTILITY ================== */
 /* ======================================== */
@@ -174,12 +171,13 @@ li {
     font-size: 0.75rem;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .flow > *  {
     margin-block-start: 1rem;
 }
-
-
-
 
 
 /* ======================================== */
@@ -193,7 +191,6 @@ li {
 }
 
 .page-flex {
-    
     padding: 2rem;
     gap: 2rem;
     display: flex;
@@ -201,7 +198,6 @@ li {
 }
 
 .page-grid{
-    
     padding: 1rem;
     display: grid;
     grid-template-columns: 220px 1fr 220px;
@@ -216,7 +212,166 @@ li {
     gap: 2rem;
 }
 
+.skip-link{
+    display: inline-block;
+    padding: 5px 15px;
+    background:white;
+    z-index: 100;
+    position: absolute; 
+    top: 0;
+    left: -10000px;
 
+    &:focus{
+        left: 0;
+    }
+}
+
+/* ======================================== */
+/* === SIGN UP PAGE ================== */
+/* ======================================== */
+
+.sign-up{
+    max-width:var(--article-width);
+    background-color: var(--brand-color-lighter);
+    margin-inline: auto;
+
+}
+
+.sign-up-container{
+    max-width: 30rem;
+    margin-inline: auto;
+    min-height: 100vh;
+    padding: 10px;
+}
+.sign-up-container h2{
+    margin-block-end: 20px;
+}
+
+.sign-up-container p{
+    margin-block-end: 20px;
+}
+
+/* ======================================== */
+/* === SIGN UP FORM ================== */
+/* ======================================== */
+
+.sign-up-container form{
+    display: grid;
+    gap: 1rem;
+}
+
+@media (width < 640px) {
+    .sign-up-container form{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.sign-up-container .form-group{
+    display: grid;
+    gap: 0.5lh;
+}
+
+.sign-up-container .form-group:has([type="checkbox"])
+{
+    grid-column: 1/ -1;
+    display: flex;
+    justify-self: center;
+}
+
+.sign-up-container .form-group:not(.checkbox-group){
+    label{
+
+        font-weight: 600;
+    }
+}
+
+.sign-up-container label{
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+
+}
+
+.sign-up-container input:not([type="checkbox"], [type="radio"]) {
+    width: 100%;
+}
+
+.sign-up-confirm {
+
+
+    text-align: center;
+    justify-self: center;
+    grid-column: 1/-1;
+
+    p{
+        margin-block: 10px;
+    }
+
+    button {
+        padding: 0.5rem 0.5rem;
+        background-color: blueviolet;
+        border: none;
+        border-radius: var(--border-radius-default);
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.sign-up-container input{
+    border-radius: 5px;
+    accent-color: var(--brand-accent);
+}
+
+.sign-up-container input:autofill{
+    border-color: blue;
+}
+
+/* ======================================== */
+/* === CALL TO ACTION ================== */
+/* ======================================== */
+
+.cta-newsletter{
+    display: grid;
+    
+
+    border: 3px solid var(--brand-accent);
+    border-radius: 8px;
+
+    padding-inline: 2rem;
+    margin-block-end: 20px;
+
+    @media (width >= 840px) {
+        grid-template-columns: 1.4fr 1fr;
+    }
+}
+
+.cta-intro{
+    padding: 1rem;
+    text-transform: capitalize;
+
+    h2{
+        font-size: 2rem;
+    }
+}
+
+.cta-signup{
+
+    place-self: center;
+    text-align: center;
+
+    padding: 1rem;
+
+    p{
+        font-size: 0.75rem;
+    }
+
+    button{
+        border-radius: 1.5rem;
+        color: white;
+        background-color: var(--brand-accent);
+        font-size: 2.5rem;
+        padding: 0.5rem;
+    }
+}
 
 /* ======================================== */
 /* === NAVIGATION BAR ================== */
@@ -229,7 +384,7 @@ li {
 
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 10;
 }
 
 .site-nav {
@@ -255,17 +410,24 @@ li {
     }
 }
 
-
 .site-nav__button {
 
     background-color: blueviolet;
     border: none;
-    color: white;
-    padding: 0.5rem 0.5rem;
+    border-radius: var(--border-radius-default);
     cursor: pointer;
+    padding: 0.5rem 0.5rem;
     width: auto;
 
-    border-radius: var(--border-radius-default);
+    a{
+        text-decoration: none;
+    }
+
+    span{
+        color: white;
+        text-decoration: none;
+    }
+
 
     @media screen and (max-width: 600px) {
 
@@ -343,16 +505,11 @@ li {
     grid-template-columns: 1.5fr 1fr;
 
     background-color: var(--brand-color-lighter);
-    /* background-color: color-mix(in srgb, rgb(202, 202, 202) 70%, #00adcc); */
 
     > :nth-child(2){
 
-        width: 100%;
-        height: 100%;
-
         display: flex;
         flex-direction: column;
-
         justify-content: center;
         
         gap: 2rem;
@@ -374,9 +531,6 @@ li {
 
     @container recipe_collection (width < 62rem){
         grid-template-columns: 1fr;
-
-
-        color: red;
     }
 }
 
@@ -418,15 +572,12 @@ li {
             background: var(--brand-color-light);
             border: none;
 
-            
-
             border-radius: 8px;
             padding: 1rem;
 
-            &:hover{
+            &:hover{ /*ADD ON FOCUS HERE*/
                 background: var(--brand-color-darker);
                 /* background: color-mix(in hsl,#00adcc, black 10%); */
-                
             }
 
         }
@@ -451,9 +602,6 @@ li {
 
 .recipe-card__text{
     display: grid;
-    p{
-        
-    }
 }
 
 .recipes__collection__card img {
@@ -575,7 +723,6 @@ li {
     @media (width > 640px) {
 
         grid-template-columns: 1fr 1fr 1fr;
-
         grid-template-areas:
         "intro   intro   intro"
         "socials socials socials"
@@ -645,9 +792,6 @@ li {
     grid-template-columns: 1fr;
     row-gap: 0.75rem;
 
-    
-    
-
     dd{
         display: contents;
     }
@@ -665,7 +809,6 @@ li {
     color: white;
     }
 }
-
 
 /* ======================================== */
 /* === PANCAKE RECIPE STUFF ================== */
@@ -765,11 +908,106 @@ section:has(ul, ol) li {
     scroll-margin-top: 40px;
 }
 
+/* ======================================== */
+/* === REVIEW SECTION ================== */
+/* ======================================== */
 
-@media screen and (max-width: 600px) {
-    body {
-        color: #ff0000;
+.review-container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 30rem;
+    margin-inline: auto;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    label {
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
+    }
+    @media (width < 640px) {
+        grid-template-columns: 1fr 1fr;
     }
 
+}
+
+.review-container form{
+   display: grid; 
+   align-items: start;
+   gap: 1rem;
+   margin-inline: 1rem;
+}
+
+.review-container .form-group{
+    display: grid;
+    gap: 1rem;
+}
+
+
+.review-button{
+    grid-column: 1/-1;
+    justify-self: center;
+    background-color: rgb(138, 43, 226);
+    border: none;
+    border-radius: var(--border-radius-default);
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    color: white;
+
+}
+
+.rating {
+
+    grid-column: 1/ -1;
+    margin: auto;
+    border: 0;
+    display: flex;
+    flex-direction: row-reverse;
+
+    input {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        font-size: 2rem;
+
+    }
+}
+
+
+.rating input:not([type="checkbox"], [type="radio"]) {
+    width: 100%;
+}
+
+.rating .form-group:not(.checkbox-group){
+    label{
+        font-weight: 600;
+    }
+}
+
+@media (width < 640px) {
+    .rating form{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.rating label {
+  color: #888888;
+  transition: color 0.2s ease;
+  padding: 0.2rem;
+  
+}
+
+.rating label:hover ,
+.rating label:hover ~ label  {
+  color: gold;
+}
+
+.rating input:checked ~ label  {
+  color: gold;
 }
 
