@@ -544,6 +544,14 @@ li {
 /* === FIRST RECIPE COLLECTION ================== */
 /* ======================================== */
 
+.recipe-collection-first {
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col-size), 100%), 1fr));
+    
+}
+
 .recipe-card {
 
     display: grid;
@@ -575,14 +583,16 @@ li {
             border-radius: 8px;
             padding: 1rem;
 
-            &:hover{ /*ADD ON FOCUS HERE*/
+            &:hover,
+            &:focus-visible { /*ADD ON FOCUS HERE*/
                 background: var(--brand-color-darker);
                 /* background: color-mix(in hsl,#00adcc, black 10%); */
             }
 
         }
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             opacity: 1;
             
         }
@@ -591,7 +601,8 @@ li {
             color: black;
             text-decoration: none;
             
-            &:hover {
+            &:hover,
+            &:focus-visible {
 
                 color: wheat;
                 text-decoration: underline;
@@ -604,7 +615,7 @@ li {
     display: grid;
 }
 
-.recipes__collection__card img {
+.recipes-card img {
     grid-area: image;
 }
 
@@ -612,6 +623,7 @@ li {
 /* ======================================== */
 /* === EDITOR RECIPE SECTION ================== */
 /* ======================================== */
+
 
 .editor-recipes{
 
@@ -665,13 +677,6 @@ li {
 
 }
 
-.recipe-collection {
-
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col-size), 100%), 1fr));
-    margin-block: 2rem;
-}
 
 /* ======================================== */
 /* === FOOTER ================== */
